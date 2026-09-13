@@ -1,26 +1,153 @@
 @import "tailwindcss";
 
+/* ========================================
+   BRAND COLOR SYSTEM
+   ======================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-dark: #172554;
+  --brand-navy: #1e3a8a;
+  --brand-blue: #3b82f6;
+  --brand-red: #dc2626;
+  --brand-peach: #fdba9a;
+  --brand-cream: #fff7ed;
+  --brand-pink: #f472b6;
+
+  /* Light Mode */
+  --background: var(--brand-cream);
+  --foreground: var(--brand-dark);
+
+  --surface: #ffffff;
+  --surface-muted: #fff1e6;
+
+  --text-primary: var(--brand-dark);
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --border: #e2e8f0;
+
+  /* Buttons */
+  --primary: var(--brand-blue);
+  --primary-hover: var(--brand-navy);
 }
 
-@theme inline {
+/* ========================================
+   TAILWIND COLOR TOKENS
+   ======================================== */
+
+@theme {
+  /*
+   * Brand colors
+   * Defined directly so Tailwind and
+   * editor tooling can identify the colors.
+   */
+
+  --color-brand-dark: #172554;
+  --color-brand-navy: #1e3a8a;
+  --color-brand-blue: #3b82f6;
+  --color-brand-red: #dc2626;
+  --color-brand-peach: #fdba9a;
+  --color-brand-cream: #fff7ed;
+  --color-brand-pink: #f472b6;
+
+  /* General UI colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+
+  /* Text colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+
+  /* Borders */
+  --color-border: var(--border);
+
+  /* Buttons */
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   DARK MODE
+   ======================================== */
+
+.dark {
+  --background: #0f172a;
+  --foreground: var(--brand-cream);
+
+  --surface: #172554;
+  --surface-muted: #1e293b;
+
+  --text-primary: var(--brand-cream);
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --border: #334155;
+
+  --primary: var(--brand-blue);
+  --primary-hover: #60a5fa;
+}
+
+/* ========================================
+   BASE STYLES
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  margin: 0;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* ========================================
+   LINKS
+   ======================================== */
+
+a {
+  text-decoration: none;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* ========================================
+   SELECTION
+   ======================================== */
+
+::selection {
+  background-color: var(--brand-pink);
+  color: var(--brand-dark);
 }
