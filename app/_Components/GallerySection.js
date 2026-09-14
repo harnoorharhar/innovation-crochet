@@ -59,11 +59,11 @@ export default function GallerySection() {
           <h2 className="font-poppins text-4xl font-bold leading-tight text-brand-dark sm:text-5xl">
             A little look at
             <br />
-            <span className="text-brand-pink">Anhad's crochet world</span>
+            <span className="text-brand-pink">Anhad&apos;s crochet world</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-xl font-inter text-base leading-7 text-brand-dark/60">
-            Every stitch tells a story. Explore some of Anhad's favorite
+            Every stitch tells a story. Explore some of Anhad&apos;s favorite
             handmade creations.
           </p>
         </div>

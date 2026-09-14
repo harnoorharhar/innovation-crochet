@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { loginAction } from "../lib/actions";
+import GoogleButton from "../_Components/GoogleButton";
 
 export default async function LoginPage({ searchParams }) {
   const params = await searchParams;
@@ -78,6 +79,8 @@ export default async function LoginPage({ searchParams }) {
               Login
             </button>
           </form>
+
+          <GoogleButton />
 
           <div className="mt-6 border-t border-brand-peach/30 pt-6 text-center">
             Login

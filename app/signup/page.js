@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { signupAction } from "../lib/actions";
+import GoogleButton from "../_Components/GoogleButton";
 
 export default function Page() {
   return (
@@ -34,24 +35,6 @@ export default function Page() {
                 type="text"
                 required
                 autoComplete="name"
-                className="w-full rounded-xl border border-brand-peach/50 px-4 py-3 outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-sm font-medium text-brand-dark"
-              >
-                Email
-              </label>
-
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                autoComplete="email"
                 className="w-full rounded-xl border border-brand-peach/50 px-4 py-3 outline-none focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
               />
             </div>
@@ -104,7 +87,7 @@ export default function Page() {
               Create account
             </button>
           </form>
-
+          <GoogleButton />
           <div className="mt-6 border-t border-brand-peach/30 pt-6 text-center">
             <p className="text-sm text-brand-navy">Already have an account?</p>
 
